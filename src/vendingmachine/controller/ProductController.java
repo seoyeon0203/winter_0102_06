@@ -1,7 +1,6 @@
 package vendingmachine.controller;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,17 +18,17 @@ public class ProductController extends JFrame{
 		ProductView view = new ProductView();
 		fullProduct();
 		view.setProductList(productList);
-		view.displayProducts();
-		JPanel panC = view.displayProducts();
+		JPanel panC = view.displayProducts(this);
+		JPanel panS = view.inputPurchase();
 		add(panC, "Center");
-		
+		add(panS, "South");
 		
 		
 		setTitle("음료자판기");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	//	setLocation(100, 50);
 	//	setSize(600, 600);
-		setBounds(100, 50, 600, 600);
+		setBounds(100, 50, 600, 700);
 		setVisible(true);
 		
 	
