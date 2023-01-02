@@ -30,7 +30,7 @@ public class ProductController extends JFrame{
 	//	setSize(600, 600);
 		setBounds(100, 50, 600, 700);
 		setVisible(true);
-		
+		setResizable(false);
 	
 		
 	}
